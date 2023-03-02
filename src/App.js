@@ -1,7 +1,12 @@
-import Flashcards from "./components/Flashcards"
+import Deck from "./components/Deck"
+import Rodape from "./components/Rodape";
+import listaPerguntas from "./listaPerguntas";
 
 export default function App() {
   return (
-    <Flashcards />
+    <>
+      <Deck listaPerguntas={listaPerguntas}/>
+      <Rodape listaPerguntas={listaPerguntas}/>    
+    </>
   );
 }
