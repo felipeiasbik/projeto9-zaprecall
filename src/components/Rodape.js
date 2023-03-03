@@ -1,10 +1,10 @@
 import App from "../App"
 import styled from "styled-components"
 
-export default function Rodape({listaPerguntas}){
+export default function Rodape({listaPerguntas, contador}){
     return(
         <Bottom>
-            0/{listaPerguntas.length} CONCLUÍDOS
+            {contador}/{listaPerguntas.length} CONCLUÍDOS
         </Bottom>
     )
 }

@@ -2,14 +2,14 @@ import styled from "styled-components";
 import Topo from "./Topo";
 import Flashcards from "./Flashcards";
 
-export default function Deck({listaPerguntas}){
+export default function Deck({listaPerguntas, contador, setContador}){
 
     return (
         <Corpo>
             <AppProjeto>
                 <Topo />
                 <Container>
-                    <Flashcards listaPerguntas={listaPerguntas}/>
+                    <Flashcards listaPerguntas={listaPerguntas} contador={contador} setContador={setContador}/>
                 </Container>
             </AppProjeto>
         </Corpo>

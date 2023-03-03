@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import flip from "../assets/flip.svg"
 
-export default function Card({p, i}){
+export default function Card({p, i, contador, setContador}){
 
     const [selecionado,setSelecionado] = useState(0);
     const [cor,setCor] = useState("#333333");
@@ -15,16 +15,19 @@ export default function Card({p, i}){
     function errou(){
         setSelecionado(3);
         setCor("#FF3030");
+        setContador(contador+1);
     }
 
     function meio(){
         setSelecionado(4);
         setCor("#FF922E");
+        setContador(contador+1);
     }
 
     function acertou(){
         setSelecionado(5);
         setCor("#2FBE34");
+        setContador(contador+1);
     }
 
     if ( selecionado === 0 ){
@@ -143,6 +146,7 @@ const Botoes = styled.div`
         padding: 0px;
         background-color: transparent;
         border: 0px;
+        cursor: pointer;
     }
 `
 const Vermelho = styled.div`
