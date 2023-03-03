@@ -37,11 +37,11 @@ export default function Card({p, i, contador, setContador}){
     } else if ( selecionado === 2 ) {
         return <Respostas data-test="flashcard"><h2 data-test="flashcard-text">{p.answer}</h2><Botoes><button onClick={() => errou()} data-test="no-btn" ><Vermelho>Não lembrei</Vermelho></button><button onClick={() => meio()} data-test="partial-btn" ><Laranja>Quase não lembrei</Laranja></button><button onClick={() => acertou()} data-test="zap-btn"><Verde>Zap!</Verde></button></Botoes></Respostas>
     } else if ( selecionado === 3 ) {
-        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button ><ion-icon name="close-circle"></ion-icon></button></Flashcard>
+        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button ><ion-icon name="close-circle" data-test="no-icon"></ion-icon></button></Flashcard>
     } else if ( selecionado === 4 ) {
-        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button><ion-icon name="help-circle"></ion-icon></button></Flashcard>
+        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button><ion-icon name="help-circle" data-test="partial-icon"></ion-icon></button></Flashcard>
     } else {
-        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button><ion-icon name="checkmark-circle"></ion-icon></button></Flashcard>
+        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button><ion-icon name="checkmark-circle" data-test="zap-icon"></ion-icon></button></Flashcard>
     }
 }
 
@@ -69,6 +69,7 @@ const Flashcard = styled.div`
         font-size: 30px;
         color:${props => props.cor};
         cursor: pointer;
+        margin-right: -10px;
     }
 
     button {
