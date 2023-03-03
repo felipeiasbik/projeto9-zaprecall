@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export default function Rodape({listaPerguntas, contador}){
     return(
-        <Bottom>
+        <Bottom data-test="footer">
             {contador}/{listaPerguntas.length} CONCLUÍDOS
         </Bottom>
     )
