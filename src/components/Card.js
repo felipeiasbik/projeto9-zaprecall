@@ -35,9 +35,9 @@ export default function Card({p, i, contador, setContador}){
     } else if ( selecionado === 1 ){
         return <Perguntas data-test="flashcard"><h2 data-test="flashcard-text">{p.question}</h2><button onClick={() => girar()}><img src={flip} alt="Ver resposta" data-test="turn-btn"/></button></Perguntas>
     } else if ( selecionado === 2 ) {
-        return <Respostas data-test="flashcard"><h2 data-test="flashcard-text">{p.answer}</h2><Botoes><button onClick={() => errou()}><Vermelho>Não lembrei</Vermelho></button><button onClick={() => meio()}><Laranja>Quase não lembrei</Laranja></button><button onClick={() => acertou()}><Verde>Zap!</Verde></button></Botoes></Respostas>
+        return <Respostas data-test="flashcard"><h2 data-test="flashcard-text">{p.answer}</h2><Botoes><button onClick={() => errou()} data-test="no-btn" ><Vermelho>Não lembrei</Vermelho></button><button onClick={() => meio()} data-test="partial-btn" ><Laranja>Quase não lembrei</Laranja></button><button onClick={() => acertou()} data-test="zap-btn"><Verde>Zap!</Verde></button></Botoes></Respostas>
     } else if ( selecionado === 3 ) {
-        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button><ion-icon name="close-circle"></ion-icon></button></Flashcard>
+        return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button ><ion-icon name="close-circle"></ion-icon></button></Flashcard>
     } else if ( selecionado === 4 ) {
         return <Flashcard selecionado={selecionado} cor={cor} data-test="flashcard"><h2 data-test="flashcard-text">Pergunta {i+1}</h2><button><ion-icon name="help-circle"></ion-icon></button></Flashcard>
     } else {
