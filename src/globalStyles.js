@@ -49,10 +49,6 @@ table {
 	border-spacing: 0;
 }
 
-// Aqui é o CSS Global
-
-  @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&family=Righteous&display=swap');
-
 `
  
 export default GlobalStyle
