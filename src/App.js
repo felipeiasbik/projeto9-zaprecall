@@ -29,11 +29,7 @@ export default function App() {
       listagem={listagem} 
       setListagem={setListagem}
       />
-      <Rodape 
-      listaPerguntas={listaPerguntas} 
-      contador={contador}
-      listagem={listagem}
-      />
+      {inicio === "flex" ? <></> : <Rodape listaPerguntas={listaPerguntas} contador={contador} listagem={listagem}/>}
     </>
   );
 }
@@ -55,6 +51,7 @@ const BoasVindas = styled.div`
     height: 161px;
   }
   h1 {
+    margin-top: 20px;
     font-family: 'Righteous', cursive;
     font-size: 36px;
     font-weight: 400px;
