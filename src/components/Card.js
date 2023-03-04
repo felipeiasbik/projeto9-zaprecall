@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import flip from "../assets/flip.svg"
 
-export default function Card({p, i, contador, setContador}){
+export default function Card({p, i, contador, setContador, listagem, setListagem}){
 
     const [selecionado,setSelecionado] = useState(0);
     const [cor,setCor] = useState("#333333");
@@ -16,18 +16,24 @@ export default function Card({p, i, contador, setContador}){
         setSelecionado(3);
         setCor("#FF3030");
         setContador(contador+1);
+        setListagem([...listagem,{id: contador, icon: "close-circle", color: "#FF3030"}]);
+        console.log(listagem);
     }
 
     function meio(){
         setSelecionado(4);
         setCor("#FF922E");
         setContador(contador+1);
+        setListagem([...listagem,{id: contador, icon: "help-circle", color: "#FF922E"}]);
+        console.log(listagem);
     }
 
     function acertou(){
         setSelecionado(5);
         setCor("#2FBE34");
         setContador(contador+1);
+        setListagem([...listagem,{id: contador, icon: "checkmark-circle", color: "#2FBE34"}]);
+        console.log(listagem);
     }
 
     if ( selecionado === 0 ){
