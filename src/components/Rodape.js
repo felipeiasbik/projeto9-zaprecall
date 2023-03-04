@@ -11,7 +11,7 @@ export default function Rodape({listaPerguntas, contador, listagem}){
             <ListagemBaixa>
             {listagem.map(icon => 
                 <ListaBottom key={icon.id} corLista={icon.color} >
-                    <ion-icon name={icon.icon} data-test="no-icon"></ion-icon> 
+                    <ion-icon name={icon.icon} data-test={icon.datatest}></ion-icon> 
                 </ListaBottom>
             )}
             </ListagemBaixa>
