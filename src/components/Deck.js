@@ -7,7 +7,7 @@ export default function Deck({listaPerguntas, contador, setContador, listagem, s
     return (
         <Corpo>
             <AppProjeto>
-                <Topo />
+            <Topo />
                 <Container listagem={listagem}>
                     <Flashcards
                     listaPerguntas={listaPerguntas}
