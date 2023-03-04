@@ -17,7 +17,6 @@ export default function Card({p, i, contador, setContador, listagem, setListagem
         setCor("#FF3030");
         setContador(contador+1);
         setListagem([...listagem,{id: contador, icon: "close-circle", color: "#FF3030", datatest: "no-icon"}]);
-        console.log(listagem);
     }
 
     function meio(){
@@ -25,7 +24,6 @@ export default function Card({p, i, contador, setContador, listagem, setListagem
         setCor("#FF922E");
         setContador(contador+1);
         setListagem([...listagem,{id: contador, icon: "help-circle", color: "#FF922E", datatest: "partial-icon"}]);
-        console.log(listagem);
     }
 
     function acertou(){
@@ -33,7 +31,6 @@ export default function Card({p, i, contador, setContador, listagem, setListagem
         setCor("#2FBE34");
         setContador(contador+1);
         setListagem([...listagem,{id: contador, icon: "checkmark-circle", color: "#2FBE34", datatest: "zap-icon"}]);
-        console.log(listagem);
     }
 
     if ( selecionado === 0 ){

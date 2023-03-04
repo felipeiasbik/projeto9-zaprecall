@@ -8,7 +8,7 @@ export default function Deck({listaPerguntas, contador, setContador, listagem, s
         <Corpo>
             <AppProjeto>
                 <Topo />
-                <Container>
+                <Container listagem={listagem}>
                     <Flashcards
                     listaPerguntas={listaPerguntas}
                     contador={contador}
@@ -44,5 +44,5 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: ${props => props.listagem.length === 8 ? 171 : 70}px;
 `
