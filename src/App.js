@@ -22,13 +22,7 @@ export default function App() {
         <h1>ZapRecall</h1>
         <button onClick={comecar} data-test="start-btn">Iniciar Recall!</button>
       </BoasVindas>
-      <Deck 
-      listaPerguntas={listaPerguntas} 
-      contador={contador}
-      setContador={setContador}
-      listagem={listagem} 
-      setListagem={setListagem}
-      />
+      {inicio === "flex" ? <></> : <Deck listaPerguntas={listaPerguntas} contador={contador} setContador={setContador} listagem={listagem} setListagem={setListagem}/>}
       {inicio === "flex" ? <></> : <Rodape listaPerguntas={listaPerguntas} contador={contador} listagem={listagem}/>}
     </>
   );
